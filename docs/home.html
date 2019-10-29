@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home Page</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="../img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="../img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="../img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="../img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="../img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="../img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="../img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="../img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="./styles/main.min.css">
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="page-header__col page-header__logo"><a class="logo" href="./"><img class="icon-home" src="./img/house.svg" alt="logo"/><span class="logo__text">shareroom</span></a>
+      </div>
+      <div class="page-header__col page-header__col--menu">
+        <nav class="top-nav">
+          <div class="top-nav__toggler" role="button" aria-haspopup="menu">
+            <button class="hamburger" aria-label="Show menu"><span></span><span></span><span></span></button>
+          </div>
+          <ul class="top-nav__list">
+            <li class="top-nav__item"><a class="top-nav__link top-nav__link--current" href="#">Home</a></li>
+            <li class="top-nav__item"><a class="top-nav__link" href="#">About</a></li>
+            <li class="top-nav__item"><a class="top-nav__link" href="#">Locations</a></li>
+            <li class="top-nav__item"><a class="top-nav__link" href="#">Reviews</a></li>
+            <li class="top-nav__item"><a class="top-nav__link" href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="page-header__col">
+        <div class="page-header-buttons"><a class="btn  btn--lg btn--main" href="#" aria-label="Find house">
+            <svg class="icon icon-search btn__icon">
+              <use xlink:href="img/sprites/sprite.svg#search"></use>
+            </svg><span class="page-header-buttons__text">Find house</span></a><a class="btn  btn--lg btn--color-main btn--white" href="#" aria-label="Sign in">
+            <svg class="icon icon-user btn__icon">
+              <use xlink:href="img/sprites/sprite.svg#user"></use>
+            </svg><span class="page-header-buttons__text">Sign in</span></a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="homepage-hero">
+        <div class="homepage-hero__overlay">
+          <div class="homepage-hero__wrap">
+            <div class="homepage-hero__col">
+              <h1 class="homepage-hero__title">Find share accomodation Worldwide on Shareroom</h1>
+              <div class="homepage-hero__buttons"><a class="btn  btn--lg btn--accent2" href="#">
+                  <svg class="icon icon-add btn__icon">
+                    <use xlink:href="img/sprites/sprite.svg#add"></use>
+                  </svg>Create new account</a><a class="btn  btn--lg btn--accent" href="#">Download Shareroom app</a>
+              </div>
+            </div>
+            <div class="homepage-hero__col homepage-hero__col--video">
+              <button class="play-button" role="presentation" aria-label="Play video">
+                <svg class="icon icon-play-arrow">
+                  <use xlink:href="img/sprites/sprite.svg#play-arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="homepage-searchform">
+        <div class="searchform searchform--home">
+          <div class="searchform__col">
+            <label class="input-text-sf"><span class="input-label">Location</span>
+              <input class="input-text-sf__input" type="text" placeholder="City"/>
+            </label>
+          </div>
+          <div class="searchform__col">
+            <div class="select-dropdown" aria-haspopup="true"><span class="input-label">Interests</span>
+              <div class="select-dropdown__value">Sport &amp; Entertainment
+              </div>
+              <div class="select-dropdown__dropdown">
+                <div class="input-radio"><span class="input-label">Interests</span>
+                  <label class="input-radio-item">
+                    <input class="input-radio-item__input" type="radio" name="radio-searchform1" checked="checked"/>
+                    <div class="input-radio-item__marker"></div><span class="input-radio-item__text">List item 1</span>
+                  </label>
+                  <label class="input-radio-item">
+                    <input class="input-radio-item__input" type="radio" name="radio-searchform1"/>
+                    <div class="input-radio-item__marker"></div><span class="input-radio-item__text">List item 2</span>
+                  </label>
+                  <label class="input-radio-item">
+                    <input class="input-radio-item__input" type="radio" name="radio-searchform1"/>
+                    <div class="input-radio-item__marker"></div><span class="input-radio-item__text">List item 3</span>
+                  </label>
+                  <label class="input-radio-item">
+                    <input class="input-radio-item__input" type="radio" name="radio-searchform1"/>
+                    <div class="input-radio-item__marker"></div><span class="input-radio-item__text">List item 4</span>
+                  </label>
+                  <label class="input-radio-item">
+                    <input class="input-radio-item__input" type="radio" name="radio-searchform1"/>
+                    <div class="input-radio-item__marker"></div><span class="input-radio-item__text">List item 5</span>
+                  </label>
+                </div>
+                <div class="select-dropdown__footer">
+                  <button class="btn  btn--main select-dropdown__result-btn">Select
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="searchform__col">
+            <div class="select-dropdown" aria-haspopup="true"><span class="input-label">Budget</span>
+              <div class="select-dropdown__value">$100 - $200
+              </div>
+              <div class="select-dropdown__dropdown">
+                <div class="input-radio"><span class="input-label">Budget</span>
+                  <label class="input-radio-item">
+                    <input class="input-radio-item__input" type="radio" name="radio-searchform77" checked="checked"/>
+                    <div class="input-radio-item__marker"></div><span class="input-radio-item__text">List item 1</span>
+                  </label>
+                  <label class="input-radio-item">
+                    <input class="input-radio-item__input" type="radio" name="radio-searchform77"/>
+                    <div class="input-radio-item__marker"></div><span class="input-radio-item__text">List item 2</span>
+                  </label>
+                </div>
+                <div class="select-dropdown__footer">
+                  <button class="btn  btn--main select-dropdown__result-btn">Select
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="searchform__col searchform__col--last">
+            <button class="btn  btn--white btn--color-main">Search
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="page-section">
+        <div class="page-section__wrap">
+          <h2 class="page-section__title">Popular searches</h2>
+          <nav class="tabs  tabs--autohide">
+            <div class="tabs__links-wrap" role="tablist"><a class="tabs__link  tabs__link--active" role="tab" data-toggle="tab" href="#home-pop-tab-1">
+                <div class="labeled-icon  labeled-icon--lg">
+                  <svg class="icon icon-house labeled-icon__icon">
+                    <use xlink:href="img/sprites/sprite.svg#house"></use>
+                  </svg>
+                  <div class="labeled-icon__label">Rooms in a sharehouse
+                  </div>
+                </div></a><a class="tabs__link" role="tab" data-toggle="tab" href="#home-pop-tab-2">
+                <div class="labeled-icon  labeled-icon--lg">
+                  <svg class="icon icon-student labeled-icon__icon">
+                    <use xlink:href="img/sprites/sprite.svg#student"></use>
+                  </svg>
+                  <div class="labeled-icon__label">Student accomodation
+                  </div>
+                </div></a><a class="tabs__link" role="tab" data-toggle="tab" href="#home-pop-tab-3">
+                <div class="labeled-icon  labeled-icon--lg">
+                  <svg class="icon icon-real-estate labeled-icon__icon">
+                    <use xlink:href="img/sprites/sprite.svg#real-estate"></use>
+                  </svg>
+                  <div class="labeled-icon__label">Whole properties for rent
+                  </div>
+                </div></a><a class="tabs__link" role="tab" data-toggle="tab" href="#home-pop-tab-4">
+                <div class="labeled-icon  labeled-icon--lg">
+                  <svg class="icon icon-bed labeled-icon__icon">
+                    <use xlink:href="img/sprites/sprite.svg#bed"></use>
+                  </svg>
+                  <div class="labeled-icon__label">One bed flats
+                  </div>
+                </div></a><a class="tabs__link" role="tab" data-toggle="tab" href="#home-pop-tab-5">
+                <div class="labeled-icon  labeled-icon--lg">
+                  <svg class="icon icon-granny labeled-icon__icon">
+                    <use xlink:href="img/sprites/sprite.svg#granny"></use>
+                  </svg>
+                  <div class="labeled-icon__label">Granny flats
+                  </div>
+                </div></a><a class="tabs__link" role="tab" data-toggle="tab" href="#home-pop-tab-6">
+                <div class="labeled-icon  labeled-icon--lg">
+                  <svg class="icon icon-studio labeled-icon__icon">
+                    <use xlink:href="img/sprites/sprite.svg#studio"></use>
+                  </svg>
+                  <div class="labeled-icon__label">Studio flats
+                  </div>
+                </div></a>
+              <div class="tabs__link  tabs__link--dropdown" aria-haspopup="true">
+                <div class="labeled-icon  labeled-icon--lg">
+                  <svg class="icon icon-more labeled-icon__icon">
+                    <use xlink:href="img/sprites/sprite.svg#more"></use>
+                  </svg>
+                  <div class="labeled-icon__label">More
+                  </div>
+                </div>
+                <div class="tabs__dropdown-wrap"></div>
+              </div>
+            </div>
+            <div class="tabs__panels-wrap">
+              <div class="tabs__panel  tabs__panel--active" role="tabpanel" id="home-pop-tab-1">
+                <div class="homepage-popular">
+                  <div class="homepage-popular__col">
+                    <div class="shifted-card">
+                      <div class="shifted-card__left">
+                        <div class="shifted-card__title">I have a spare room</div>
+                        <div class="shifted-card__subtitle">Over 2,000 spare rooms</div>
+                      </div>
+                      <div class="shifted-card__right"><a class="btn  btn--lg btn--accent2" href="#">Create property listing</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="homepage-popular__col">
+                    <div class="shifted-card">
+                      <div class="shifted-card__left">
+                        <div class="shifted-card__title">I need a place</div>
+                        <div class="shifted-card__subtitle">Over 20,000 users searching a place</div>
+                      </div>
+                      <div class="shifted-card__right"><a class="btn  btn--lg btn--accent" href="#">Create a person listing</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tabs__panel" role="tabpanel" id="home-pop-tab-2">
+                <div class="homepage-popular">
+                  <div class="homepage-popular__col">
+                    <div class="shifted-card">
+                      <div class="shifted-card__left">
+                        <div class="shifted-card__title">I have a spare room</div>
+                        <div class="shifted-card__subtitle">Over 2,000 spare rooms</div>
+                      </div>
+                      <div class="shifted-card__right"><a class="btn  btn--lg btn--accent" href="#">Create property listing</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="homepage-popular__col">
+                    <div class="shifted-card">
+                      <div class="shifted-card__left">
+                        <div class="shifted-card__title">I need a place</div>
+                        <div class="shifted-card__subtitle">Over 20,000 users searching a place</div>
+                      </div>
+                      <div class="shifted-card__right"><a class="btn  btn--lg btn--accent2" href="#">Create a person listing</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tabs__panel" role="tabpanel" id="home-pop-tab-3">
+                <div class="homepage-popular">
+                  <div class="homepage-popular__col">
+                    <div class="shifted-card">
+                      <div class="shifted-card__left">
+                        <div class="shifted-card__title">I have a spare room</div>
+                        <div class="shifted-card__subtitle">Over 2,000 spare rooms</div>
+                      </div>
+                      <div class="shifted-card__right"><a class="btn  btn--lg btn--accent2" href="#">Create property listing</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="homepage-popular__col">
+                    <div class="shifted-card">
+                      <div class="shifted-card__left">
+                        <div class="shifted-card__title">I need a place</div>
+                        <div class="shifted-card__subtitle">Over 20,000 users searching a place</div>
+                      </div>
+                      <div class="shifted-card__right"><a class="btn  btn--lg btn--main" href="#">Create a person listing </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tabs__panel" role="tabpanel" id="home-pop-tab-4">
+                <div class="homepage-popular">
+                  <div class="homepage-popular__col">
+                    <div class="shifted-card">
+                      <div class="shifted-card__left">
+                        <div class="shifted-card__title">I have a spare room</div>
+                        <div class="shifted-card__subtitle">Over 2,000 spare rooms</div>
+                      </div>
+                      <div class="shifted-card__right"><a class="btn  btn--lg" href="#">Create property listing</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="homepage-popular__col">
+                    <div class="shifted-card">
+                      <div class="shifted-card__left">
+                        <div class="shifted-card__title">I need a place</div>
+                        <div class="shifted-card__subtitle">Over 20,000 users searching a place</div>
+                      </div>
+                      <div class="shifted-card__right"><a class="btn  btn--lg btn--main" href="#">Create a person listing </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tabs__panel" role="tabpanel" id="home-pop-tab-5">
+                <div class="homepage-popular">
+                  <div class="homepage-popular__col">
+                    <div class="shifted-card">
+                      <div class="shifted-card__left">
+                        <div class="shifted-card__title">I have a spare room</div>
+                        <div class="shifted-card__subtitle">Over 2,000 spare rooms</div>
+                      </div>
+                      <div class="shifted-card__right"><a class="btn  btn--lg btn--main" href="#">Create property listing </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="homepage-popular__col">
+                    <div class="shifted-card">
+                      <div class="shifted-card__left">
+                        <div class="shifted-card__title">I need a place</div>
+                        <div class="shifted-card__subtitle">Over 20,000 users searching a place</div>
+                      </div>
+                      <div class="shifted-card__right"><a class="btn  btn--lg btn--accent2" href="#">Create a person listing</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tabs__panel" role="tabpanel" id="home-pop-tab-6">
+                <div class="homepage-popular">
+                  <div class="homepage-popular__col">
+                    <div class="shifted-card">
+                      <div class="shifted-card__left">
+                        <div class="shifted-card__title">I have a spare room</div>
+                        <div class="shifted-card__subtitle">Over 2,000 spare rooms</div>
+                      </div>
+                      <div class="shifted-card__right"><a class="btn  btn--lg btn--white" href="#">Create property listing </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="homepage-popular__col">
+                    <div class="shifted-card">
+                      <div class="shifted-card__left">
+                        <div class="shifted-card__title">I need a place</div>
+                        <div class="shifted-card__subtitle">Over 20,000 users searching a place</div>
+                      </div>
+                      <div class="shifted-card__right"><a class="btn  btn--lg btn--accent" href="#">Create a person listing</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </section>
+      <section class="page-section page-section--white">
+        <div class="page-section__wrap">
+          <h2 class="page-section__title">Latest property listing in <a class="link  link--gray" href="#">Melbourne</a>
+          </h2>
+          <div class="row-rooms-home">
+            <div class="row-rooms-home__col">
+              <article class="card-property"><a class="card-property__photo" href="#"><img src="./img/apartment-room-1.jpg" alt="106/1 Macquarie Street, Melbourne"/>
+                  <div class="card-property__price">$150</div></a>
+                <h3 class="card-property__title"><a class="card-property__title-link" href="#">106/1 Macquarie Street, Melbourne</a></h3>
+                <div class="card-property__subtitle">Homestay</div>
+              </article>
+            </div>
+            <div class="row-rooms-home__col">
+              <article class="card-property"><a class="card-property__photo" href="#"><img src="./img/apartment-room-2.jpg" alt="106/1 Macquarie Street, Melbourne"/>
+                  <div class="card-property__price">$150</div></a>
+                <h3 class="card-property__title"><a class="card-property__title-link" href="#">106/1 Macquarie Street, Melbourne</a></h3>
+                <div class="card-property__subtitle">Homestay</div>
+              </article>
+            </div>
+            <div class="row-rooms-home__col">
+              <article class="card-property"><a class="card-property__photo" href="#"><img src="./img/apartment-room-3.jpg" alt="106/1 Macquarie Street, Melbourne"/>
+                  <div class="card-property__price">$150</div></a>
+                <h3 class="card-property__title"><a class="card-property__title-link" href="#">106/1 Macquarie Street, Melbourne</a></h3>
+                <div class="card-property__subtitle">Homestay</div>
+              </article>
+            </div>
+            <div class="row-rooms-home__col">
+              <article class="card-property"><a class="card-property__photo" href="#"><img src="./img/apartment-room-4.jpg" alt="106/1 Macquarie Street, Melbourne"/>
+                  <div class="card-property__price">$150</div></a>
+                <h3 class="card-property__title"><a class="card-property__title-link" href="#">106/1 Macquarie Street, Melbourne</a></h3>
+                <div class="card-property__subtitle">Homestay</div>
+              </article>
+            </div>
+          </div>
+          <div class="page-section__footer"><a class="link" href="#">View all properties in Melbourne</a>
+          </div>
+          <div class="page-section__divider"></div>
+          <h2 class="page-section__title">Latest people looking in <a class="link  link--gray" href="#">Melbourne</a>
+          </h2>
+          <div class="row-rooms-home">
+            <div class="row-rooms-home__col row-rooms-home__col--xs">
+              <article class="card-people"><a class="card-people__photo" href="#"><img src="./img/people-1.jpg" alt="Taylor Robertson"/></a>
+                <h3 class="card-people__title"><a class="card-people__title-link" href="#">Taylor Robertson</a></h3>
+                <div class="card-people__subtitle"><b class="color-black">Looking in: </b> Oakleigh, Narre Warren, Frankston, Dandenong, Cranbourne
+                </div>
+              </article>
+            </div>
+            <div class="row-rooms-home__col row-rooms-home__col--xs">
+              <article class="card-people"><a class="card-people__photo card-people__photo--off" href="#"><img src="./img/people-2.jpg" alt="Chris Evans"/></a>
+                <h3 class="card-people__title"><a class="card-people__title-link" href="#">Chris Evans</a></h3>
+                <div class="card-people__subtitle"><b class="color-black">Looking in: </b> Oakleigh, Narre Warren, Frankston, Dandenong, Cranbourne
+                </div>
+              </article>
+            </div>
+            <div class="row-rooms-home__col row-rooms-home__col--xs">
+              <article class="card-people"><a class="card-people__photo card-people__photo--off" href="#"><img src="./img/people-3.jpg" alt="Dan Petty"/></a>
+                <h3 class="card-people__title"><a class="card-people__title-link" href="#">Dan Petty</a></h3>
+                <div class="card-people__subtitle"><b class="color-black">Looking in: </b> Oakleigh, Narre Warren, Frankston, Dandenong, Cranbourne
+                </div>
+              </article>
+            </div>
+            <div class="row-rooms-home__col row-rooms-home__col--xs">
+              <article class="card-people"><a class="card-people__photo" href="#"><img src="./img/people-4.jpg" alt="Maria Cole"/></a>
+                <h3 class="card-people__title"><a class="card-people__title-link" href="#">Maria Cole</a></h3>
+                <div class="card-people__subtitle"><b class="color-black">Looking in: </b> Oakleigh, Narre Warren, Frankston, Dandenong, Cranbourne
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="page-section__footer"><a class="link" href="#">View all people looking in Melbourne</a>
+          </div>
+        </div>
+      </section>
+      <section class="homepage-hero2">
+        <div class="homepage-hero2__container">
+          <div class="homepage-hero2__wrap"><small class="homepage-hero2__subtitle">Our application</small>
+            <h2 class="homepage-hero2__title">World biggest share<br>accomodation<br>website</h2>
+            <div class="homepage-hero2__buttons"><a class="btn  btn--white btn--color-black btn-app" href="#">
+                <div class="labeled-icon">
+                  <svg class="icon icon-apple labeled-icon__icon">
+                    <use xlink:href="img/sprites/sprite.svg#apple"></use>
+                  </svg>
+                  <div class="labeled-icon__label">
+                    <div class="btn-app__small">Available on the</div>
+                    <div class="btn-app__text">Appstore</div>
+                  </div>
+                </div></a><a class="btn  btn--main btn-app" href="#">
+                <div class="labeled-icon">
+                  <svg class="icon icon-android labeled-icon__icon">
+                    <use xlink:href="img/sprites/sprite.svg#android"></use>
+                  </svg>
+                  <div class="labeled-icon__label">
+                    <div class="btn-app__small">Available on the</div>
+                    <div class="btn-app__text">Playmarket</div>
+                  </div>
+                </div></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="page-section page-section--last">
+        <div class="page-section__wrap">
+          <div class="reviews">
+            <h2 class="reviews__title">Reviews</h2>
+            <div class="reviews__wrap">
+              <div class="reviews__authors-left">
+                <div class="reviews__author reviews__author--active" data-slide-id="1"><img class="reviews__author-photo" src="./img/people-1.jpg"></div>
+                <div class="reviews__author" data-slide-id="2"><img class="reviews__author-photo" src="./img/people-2.jpg"></div>
+                <div class="reviews__author" data-slide-id="3"><img class="reviews__author-photo" src="./img/people-3.jpg"></div>
+              </div>
+              <div class="reviews__slides-wrap">
+                <div class="review reviews__slide reviews__slide--active" data-slide-id="1">
+                  <div class="review__text">It helped us to rapidly find shared room that were much more time-consuming in the past
+                  </div>
+                  <div class="review__author-name">Nick Butura</div>
+                  <div class="review__author-info">Student from Tbilisi</div>
+                </div>
+                <div class="review reviews__slide" data-slide-id="2">
+                  <div class="review__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate architecto beatae nobis!
+                  </div>
+                  <div class="review__author-name">Cris Evans</div>
+                  <div class="review__author-info">Student from Frankston</div>
+                </div>
+                <div class="review reviews__slide" data-slide-id="3">
+                  <div class="review__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae aliquam itaque natus maxime expedita odit ad.
+                  </div>
+                  <div class="review__author-name">Nick Butura</div>
+                  <div class="review__author-info">Student from Cranbourne</div>
+                </div>
+                <div class="review reviews__slide" data-slide-id="4">
+                  <div class="review__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis quas corporis eos dolorem.
+                  </div>
+                  <div class="review__author-name">Nick Butura</div>
+                  <div class="review__author-info">Student from Oakleigh</div>
+                </div>
+                <div class="review reviews__slide" data-slide-id="5">
+                  <div class="review__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque delectus, dolor qui accusamus fuga magni! Architecto?
+                  </div>
+                  <div class="review__author-name">Nick Butura</div>
+                  <div class="review__author-info">Student from Dandenong</div>
+                </div>
+                <div class="review reviews__slide" data-slide-id="6">
+                  <div class="review__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, nulla deserunt quaerat quisquam suscipit quidem.
+                  </div>
+                  <div class="review__author-name">Nick Butura</div>
+                  <div class="review__author-info">Student from Frankston</div>
+                </div>
+              </div>
+              <div class="reviews__authors-right">
+                <div class="reviews__author" data-slide-id="4"><img class="reviews__author-photo" src="./img/people-4.jpg"></div>
+                <div class="reviews__author" data-slide-id="5"><img class="reviews__author-photo" src="./img/people-5.jpg"></div>
+                <div class="reviews__author" data-slide-id="6"><img class="reviews__author-photo" src="./img/people-6.jpg"></div>
+              </div>
+              <div class="reviews__carousel"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__logo"><a class="logo  logo--footer" href="./"><img class="icon-home" src="./img/house.svg" alt="logo"/><span class="logo__text">shareroom</span></a>
+      </div>
+      <div class="page-footer__wrap">
+        <nav class="menu-footer page-footer__menu">
+          <div class="menu-footer__title">Contact</div>
+          <ul class="menu-footer__list">
+            <li class="menu-footer__item"><a class="menu-footer__link" href="#">Contact Shareroom</a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="menu-footer page-footer__menu">
+          <div class="menu-footer__title">About</div>
+          <ul class="menu-footer__list">
+            <li class="menu-footer__item"><a class="menu-footer__link" href="#">About Shareroom</a>
+            </li>
+            <li class="menu-footer__item"><a class="menu-footer__link" href="#">Shareroom for Startups</a>
+            </li>
+            <li class="menu-footer__item"><a class="menu-footer__link" href="#">Pricing</a>
+            </li>
+            <li class="menu-footer__item"><a class="menu-footer__link" href="#">Students & Teachers</a>
+            </li>
+            <li class="menu-footer__item"><a class="menu-footer__link" href="#">Media kit</a>
+            </li>
+            <li class="menu-footer__item"><a class="menu-footer__link" href="#">Jobs</a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="menu-footer page-footer__menu">
+          <div class="menu-footer__title">Platform</div>
+          <ul class="menu-footer__list">
+            <li class="menu-footer__item"><a class="menu-footer__link" href="#">Find Shared Rooms</a>
+            </li>
+            <li class="menu-footer__item"><a class="menu-footer__link" href="#">Add A Place</a>
+            </li>
+            <li class="menu-footer__item"><a class="menu-footer__link" href="#">Services</a>
+            </li>
+            <li class="menu-footer__item"><a class="menu-footer__link" href="#">Boards</a>
+            </li>
+            <li class="menu-footer__item"><a class="menu-footer__link" href="#">Calendar</a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="menu-footer page-footer__menu">
+          <div class="menu-footer__title">Resources</div>
+          <ul class="menu-footer__list">
+            <li class="menu-footer__item"><a class="menu-footer__link" href="#">Blog</a>
+            </li>
+            <li class="menu-footer__item"><a class="menu-footer__link" href="#">Design Resources</a>
+            </li>
+            <li class="menu-footer__item"><a class="menu-footer__link" href="#">Product Training</a>
+            </li>
+            <li class="menu-footer__item"><a class="menu-footer__link" href="#">Help Center</a>
+            </li>
+            <li class="menu-footer__item"><a class="menu-footer__link" href="#">Knowledge Base</a>
+            </li>
+            <li class="menu-footer__item"><a class="menu-footer__link" href="#">Community</a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="menu-footer page-footer__menu page-footer__menu--last">
+          <div class="menu-footer__title">Download our app</div>
+          <ul class="menu-footer__list">
+            <li class="menu-footer__item"><a class="btn  btn--white btn--color-black btn-app" href="#">
+                <div class="labeled-icon">
+                  <svg class="icon icon-apple labeled-icon__icon">
+                    <use xlink:href="img/sprites/sprite.svg#apple"></use>
+                  </svg>
+                  <div class="labeled-icon__label">
+                    <div class="btn-app__small">Available on the</div>
+                    <div class="btn-app__text">Appstore</div>
+                  </div>
+                </div></a>
+            </li>
+            <li class="menu-footer__item"><a class="btn  btn--main btn-app" href="#">
+                <div class="labeled-icon">
+                  <svg class="icon icon-android labeled-icon__icon">
+                    <use xlink:href="img/sprites/sprite.svg#android"></use>
+                  </svg>
+                  <div class="labeled-icon__label">
+                    <div class="btn-app__small">Available on the</div>
+                    <div class="btn-app__text">Playmarket</div>
+                  </div>
+                </div></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+    <script src="./js/main.min.js"></script>
+    <script src="./js/vendor.min.js"></script>
+  </body>
+</html>
