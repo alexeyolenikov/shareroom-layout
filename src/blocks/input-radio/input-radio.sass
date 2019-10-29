@@ -1,0 +1,78 @@
+.input-radio
+  box-sizing: border-box
+  display: block
+  
+  &__title
+    margin-bottom: $typo-margin-vertical
+    text-transform: uppercase
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+
+
+.input-radio-item
+  display: flex
+  position: relative
+
+  &:not(:last-of-type)
+    margin-bottom: $typo-margin-vertical
+
+  &__input
+    position: absolute
+    z-index: -1
+    opacity: 0// hide input
+
+
+  &__marker
+    $radio-icon-width: 1em
+
+    display: block
+    margin-top: 2px
+    flex: 0
+    min-width: $radio-icon-width
+    height: $radio-icon-width
+
+    border: 2px solid $text-color--gray
+    border-radius: 50%
+    padding: 2px
+
+    user-select: none
+    cursor: pointer
+
+    transition: box-shadow $transition-time
+
+    @at-root input:checked ~ &
+      border-color: $color-main
+          
+
+    @at-root input:disabled ~ &//eslint-disable-line
+      border-color: $gray-light
+      background: $gray-lighter
+      cursor: not-allowed
+
+    &:after
+      content: ""
+      display: block
+      width: 100%
+      height: 100%
+      opacity: 0
+      border-radius: 50%
+      background-color: $color-main
+      transition: opacity $transition-time
+
+      @at-root input:checked ~ &
+        opacity: 1
+
+      @at-root input:checked:disabled ~ &//eslint-disable-line
+        background-color: $gray-light
+
+  &__text
+    padding-left: .5em
+    cursor: pointer
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+
+    @at-root input:disabled ~ &
+      cursor: not-allowed
+      color: $gray-light

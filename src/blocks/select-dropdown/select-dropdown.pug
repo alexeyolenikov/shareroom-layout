@@ -1,0 +1,38 @@
+//-   
+  +select-dropdown("Label", "Initial value", "Select", "mods", "labelMods")
+    | Dropdown content
+
+//- 
+  Arguments
+    {String} label  Label text
+    {String} value  Initial value
+    {String} resultButtonText  Text for confirm button, placed in dropdown bottom. 
+                                If it empty - the button will not be displayed
+    {String} mods  List of block modificators
+    {String} labelMods  List of label block modificators
+
+mixin select-dropdown(label, value, resultButtonText, mods, labelMods)
+
+  //- add modificators
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' select-dropdown--' + modsList[i].trim();
+      }
+    }
+
+  .select-dropdown(class=allMods aria-haspopup="true")&attributes(attributes)
+    +input-label(labelMods)
+      =label
+      
+    .select-dropdown__value
+      =value
+
+    .select-dropdown__dropdown
+      block
+
+      if(typeof(resultButtonText) !== 'undefined' && resultButtonText)
+        .select-dropdown__footer
+          +btn(resultButtonText, 'main')(class='select-dropdown__result-btn')

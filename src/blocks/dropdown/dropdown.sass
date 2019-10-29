@@ -1,0 +1,42 @@
+.dropdown
+
+  &__toggler
+    cursor: pointer
+    user-select: none
+    font: inherit
+    color: inherit
+    border: none
+    outline: none
+    background-color: transparent
+    padding: $field-padding-vertical * 2 $field-padding-horizontal * 2
+    transition: color $transition-time
+
+    @media (max-width: $screen-lg - 1)
+      padding: $field-padding-vertical $field-padding-horizontal
+
+  &__content
+    position: absolute
+    z-index: 3
+    opacity: 0
+    visibility: hidden
+
+    max-width: calc(100% - 10px)
+    padding: $field-padding-vertical * 2 $field-padding-horizontal * 2
+    border-radius: $border-radius
+    box-shadow: $shadow
+    background-color: $white
+
+    transition: $transition-time
+
+    @media (max-width: $screen-md - 1)
+      max-width: 90%
+
+
+  &--is-open
+
+    & .dropdown__content
+      visibility: visible
+      opacity: 1
+
+    & .dropdown__toggler
+      color: $color-main

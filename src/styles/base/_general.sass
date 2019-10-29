@@ -1,0 +1,150 @@
+// stylelint-disable
+html
+  box-sizing: border-box
+  min-height: 100vh
+
+*, *:before, *:after
+  box-sizing: inherit
+
+body
+  position: relative
+  min-width: 320px
+  overflow-x: hidden
+
+  font-family: $default-font
+  font-size: $font-size
+  line-height: $line-height
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  font-weight: 700
+  letter-spacing: -.025em
+  margin-top: $line-height * 1em
+  margin-bottom: ($line-height / 2) * 1em
+
+h1,
+h2
+  font-size: $font-size--h2
+
+  
+  
+  
+  
+h3
+  font-size: $font-size--h3
+
+h4
+  font-size: $font-size--h4
+
+h5
+  font-size: $font-size--h5
+
+h6
+  font-size: $font-size--h6
+
+p,
+ul,
+ol,
+dl,
+blockquote,
+pre,
+address,
+figure
+  margin-top: ($line-height / 2) * 1em
+  margin-bottom: ($line-height / 2) * 1em
+
+address
+  font-style: normal
+
+ul,
+ol
+  padding-left: 1.2em
+
+ol ol,
+ul ul,
+ol ul,
+ul ol
+  margin-top: 0
+  margin-bottom: 0
+
+li
+  line-height: inherit
+
+dt
+  font-weight: 700
+
+dd
+  margin-left: 0
+
+  
+  & + dt
+    margin-top: ($line-height / 2) * 1em
+
+hr
+  margin-top: 40px
+  margin-bottom: 40px
+  border: 0
+  border-top: 1px solid border-color
+
+small
+  font-size: $font-size--small
+
+
+sub,
+sup
+  font-size: 70%
+
+mark
+  background: #fcf8e3
+  padding: 0.1em 0.3em
+
+b,
+strong
+  font-weight: 500
+
+abbr[title]
+  border-bottom: 1px dotted
+
+blockquote
+  padding: 0
+  margin-left: 0
+  margin-right: 0
+
+code
+  padding: 0.06em 0.3em
+  color: $text-color
+  background-color: $gray-light
+  border-radius: $border-radius
+
+kbd
+  padding: 0.06em 0.3em
+  color: $text-color
+  background-color: $gray-light
+  border-radius: $border-radius
+
+  kbd
+    padding: 0
+
+pre
+  display: block
+  width: 100%
+  overflow-x: auto
+  tab-size: 2
+
+a
+  color: $color-accent2
+  transition: color $transition-time
+
+  &:hover,
+  &:focus
+    color: $color-accent2--light
+    
+.nowrap
+  white-space: nowrap
+
+.color-black
+  color: $black

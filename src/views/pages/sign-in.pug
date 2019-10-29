@@ -1,0 +1,33 @@
+extends ../layouts/default
+
+block variables
+  - const title = "Sign In";
+  - const loginBg = true; 
+
+block content
+
+  main.sign-in__wrap
+    h1.sign-in__title Sign in to Shareroom
+    h2.sign-in__subtitle Enter your details below
+    
+    form.form.sign-in__form
+      .form__row
+        .form__col-xl50
+          +input-text()(type="email" placeholder="E-mail")
+            | Email address
+
+        .form__col-xl50
+          +input-text('', 'forgot')(type="password" placeholder="Password")
+            | Password
+            a.input-label__forgot-link(href="#") Forgot your password?
+      
+      .form__btns
+        +btn('Sign in', 'main, xl', true)(type="submit", class="form__submit")
+        +btn('Create new account', 'white, xl')(href="#")
+
+
+
+block scripts
+  script(src="./js/main.js")
+  //- script(src="../js/pageB.js")
+  script(src="./js/vendor.js")

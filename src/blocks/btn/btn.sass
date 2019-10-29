@@ -1,0 +1,158 @@
+.btn
+  box-sizing: border-box
+
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  vertical-align: middle
+
+  max-width: 100%
+  overflow: hidden
+  margin: 0
+  border-radius: $border-radius
+  border: 0
+  padding: $field-padding-vertical $field-padding-horizontal
+  background-color: $gray-lighter
+  background-image: none
+  cursor: pointer
+
+  color: $text-color--gray
+  font-size: .75em
+  line-height: 1.5em
+  letter-spacing: .03em
+  font-family: inherit
+  font-weight: 700
+  text-transform: uppercase
+  text-align: center
+  text-decoration: none
+  white-space: nowrap
+  text-overflow: ellipsis
+  user-select: none
+
+  transition: color $transition-time, background-color $transition-time
+
+  &:hover,
+  &:focus
+    text-decoration: none
+    color: darken($text-color--gray, 10%)
+    background-color: darken($gray-lighter, 10%)
+    
+
+  &__icon
+    vertical-align: middle
+    width: 1.5em
+    height: 1.5em
+    margin-right: 1.5em
+
+
+  &--disabled,
+  &:disabled
+    opacity: $opacity
+    cursor: not-allowed
+    color: $text-color--gray
+    background-color: $gray-lighter
+
+    
+  &--white
+    background-color: $white
+
+    &:hover,
+    &:focus
+      background-color: $gray-lighter
+
+    &.btn--disabled,
+    &:disabled
+      background-color: $white
+
+
+  &--main
+    color: $white
+    background-color: $color-main
+
+    &:hover,
+    &:focus
+      color: $white
+      background-color: darken($color-main, 10%)
+
+    &.btn--disabled,
+    &:disabled
+      color: $white
+      background-color: $color-main--light
+
+
+  &--accent
+    color: $white
+    background-color: $color-accent
+
+    &:hover,
+    &:focus
+      color: $white
+      background-color: darken($color-accent, 10%)
+
+    &.btn--disabled,
+    &:disabled
+      color: $white
+      background-color: lighten($color-accent, 10%)
+
+
+  &--accent2
+    color: $white
+    background-color: $color-accent2
+
+    &:hover,
+    &:focus
+      color: $white
+      background-color: darken($color-accent2, 10%)
+
+    &.btn--disabled,
+    &:disabled
+      color: $white
+      background-color: $color-accent2--light
+
+  
+  &--color-main
+    color: $color-main
+
+    &:hover,
+    &:focus
+      color: darken($color-main, 10%)
+
+    &.btn--disabled,
+    &:disabled
+      color: $color-main--light
+
+  &--color-black
+    color: $black
+
+    &:hover,
+    &:focus
+      color: lighten($black, 10%)
+
+    &.btn--disabled,
+    &:disabled
+      color: $text-color--gray
+
+  &--no-bg
+    background-color: transparent
+
+    &:active,
+    &:focus
+      box-shadow: none
+
+    &:hover,
+    &:focus
+      background-color: transparent
+
+    &.btn--disabled,
+    &:disabled
+      background-color: transparent
+
+
+  &--lg
+    padding: $field-padding-vertical*2  $field-padding-horizontal*2
+
+  &--xl
+    padding: $field-padding-vertical*3  $field-padding-horizontal*3
+
+  &--xxl
+    padding: $field-padding-vertical*4  $field-padding-horizontal*4

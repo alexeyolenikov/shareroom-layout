@@ -1,0 +1,57 @@
+.input-text-sf
+  width: 100%
+
+  &__input
+    display: block
+    width: 100%
+    max-width: 100%
+    height: 1.3em
+    overflow: hidden
+    margin: 0
+    border: none
+    outline: none
+    background: none
+
+    color: $text-color
+    font-family: inherit
+    font-size: 1.5em
+    line-height: 1
+    letter-spacing: -.025em
+    text-overflow: ellipsis
+
+    -moz-appearance: textfield
+    // stylelint-disable-line
+    appearance: textfield
+
+    @media (min-width: $screen-xxl)
+      font-size: 1.75em
+
+    @media (min-width: $screen-xl)
+      font-size: 1.625em
+
+    &:focus
+      outline: none
+
+    &[disabled],
+    &[readonly]
+      cursor: not-allowed
+
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-decoration,
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button
+      -webkit-appearance: none//stylelint-disable-line  property-no-vendor-prefix
+    
+    &::placeholder
+      color: $text-color--gray
+      opacity: 1
+
+  &--error
+
+    .input-text-sf__name,
+    .input-text-sf__input
+      color: $color-danger
+
+    .input-text-sf__input
+      border-color: $color-danger
+      background-color: lighten($color-danger, 35%)

@@ -1,0 +1,16 @@
+.homepage-popular
+  @media (min-width: $screen-md)
+    display: flex
+
+  &__col
+    max-width: 550px
+
+    @media (min-width: $screen-md)
+      flex: 100%
+      max-width: 100%
+
+    &:first-child
+      margin: 0 0 2em
+
+      @media (min-width: $screen-md)
+        margin: 0 2em 0 0

@@ -1,0 +1,20 @@
+//-   +play-button("")
+mixin play-button(mods)
+
+  //- add modificators
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' play-button--' + modsList[i].trim();
+      }
+    }
+
+  if (attributes.href)
+    a.play-button(class=allMods)&attributes(attributes)
+      +icon('play-arrow')
+
+  else
+    button.play-button(class=allMods)&attributes(attributes)
+      +icon('play-arrow')

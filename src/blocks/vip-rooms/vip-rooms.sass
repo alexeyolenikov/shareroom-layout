@@ -1,0 +1,53 @@
+.vip-rooms
+  background-color: $white
+  height: 100%
+  padding: 20px 0 40px 40px
+  border-radius: $border-radius
+
+  @media (min-width: $screen-xl)
+    padding-left: 60px
+  
+  
+  &__title
+    margin: 0 0 20px
+    font-size: 1em
+    color: $color-accent
+    text-transform: uppercase
+    font-weight: 700
+
+  &__wrap
+    display: flex
+    overflow: hidden
+
+  &__item
+    flex: 0 0 320px
+    max-width: 320px
+    padding-right: 30px
+    opacity: 1
+    transition: opacity $transition-time, margin-left $transition-time
+ 
+    @media (min-width: $screen-xl)
+      flex: 0 0 350px
+      max-width: 350px
+    
+    
+
+  &__dots
+    margin-top: 60px
+    display: flex
+
+  &__dot
+    display: inline-block
+    width: 12px
+    height: 12px
+    border-radius: 50%
+    border: 2px solid $white
+    transition: border-color $transition-time, background-color $transition-time
+    background-color: $gray-light
+    margin-right: 1em
+    cursor: pointer
+
+    &--active
+      cursor: default
+      border-color: $color-main
+      background-color: $white

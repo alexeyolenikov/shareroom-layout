@@ -1,0 +1,39 @@
+.menu-footer
+  color: $white
+
+  &__title
+    margin-bottom: $typo-margin-vertical*2
+    text-transform: uppercase
+    font-size: 12px
+    opacity: $opacity
+
+    @media (min-width: $screen-md)
+      margin-bottom: $typo-margin-vertical*3
+    
+  &__list
+    list-style: none
+    margin: 0
+    padding: 0
+
+  &__item
+    font-weight: 500
+
+    @media (min-width: $screen-lg)
+      font-size: 1.125em
+
+    &:not(:first-child)
+      margin-top: $typo-margin-vertical
+
+  &__link
+    &:hover,
+    &:focus
+      color: $white
+
+  &__item,
+  &__link
+    display: block
+    overflow: hidden
+    color: $white
+    text-decoration: none
+    text-overflow: ellipsis
+    

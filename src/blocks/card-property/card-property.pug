@@ -1,0 +1,23 @@
+mixin card-property(title, subtitle, price, imgsrc , mods)
+
+  //- add modificators
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' card-property--' + modsList[i].trim();
+      }
+    }
+
+  article.card-property(class=allMods)&attributes(attributes)
+    a.card-property__photo(href="#")
+      img(src=imgsrc, alt=title)
+
+      if (price !== 'undefined' && price)
+        .card-property__price!= price
+
+    h3.card-property__title
+      a.card-property__title-link(href="#")!= title
+
+    .card-property__subtitle!= subtitle

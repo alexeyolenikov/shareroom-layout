@@ -1,0 +1,95 @@
+.searchform
+  $blockName: &
+
+  @include container()
+  display: flex  
+  font-size: .875em  
+
+  @media (min-width: $screen-md)
+    font-size: 1em
+
+  &__col
+    flex: 1 1 auto
+    width: 0
+    padding: 0 $field-padding-horizontal
+    border-right: 1px solid $border-color
+
+    @media (min-width: $screen-sm)
+      padding: 0 $field-padding-horizontal*1.5
+
+    @media (min-width: $screen-md)
+      padding: 0 $field-padding-horizontal*2
+
+    &:first-of-type
+      padding-left: 0
+
+    &.searchform__col--last
+      display: flex
+      flex: 0 0 auto
+      align-items: center
+      width: auto
+      border-right: none
+      padding-right: 0
+      font-size: 1.25em
+
+    &--hidden
+      display: none
+
+  &__col-drop-content
+    width: 100%
+    font-size: 18px
+
+  &__more
+    display: flex
+    flex-wrap: wrap
+    margin: 0 #{-$field-padding-horizontal}
+
+
+  &__more-col
+    flex: 1 1 auto
+    padding: $field-padding-vertical*2 $field-padding-horizontal
+
+    @media (max-width: $screen-sm - 1)
+      min-width: 50%
+    
+    &--hidden
+      display: none
+    
+
+  &--home
+    @media (max-width: $screen-sm - 1)
+      flex-wrap: wrap
+
+    #{$blockName}__col
+      @media (max-width: $screen-md - 1)
+        padding: 0 $field-padding-horizontal
+    
+      @media (max-width: $screen-sm - 1)
+        flex: 0 0 50%
+        max-width: 50%
+        border-right: none
+        padding: 0 0 0 $field-padding-horizontal/2
+
+      &:first-of-type
+        @media (max-width: $screen-md - 1)
+          padding-left: 0        
+
+      &:nth-child(2n+1)
+        @media (max-width: $screen-sm - 1)
+          padding: 0 $field-padding-horizontal/2 0 0
+
+      &:nth-child(n+3)
+        @media (max-width: $screen-sm - 1)
+          margin-top: 20px
+
+
+    #{$blockName}__col--last
+      @media (max-width: $screen-md - 1)
+        padding-right: 0
+
+      @media (max-width: $screen-sm - 1)
+        flex: 1 0 100%
+        width: auto
+        justify-content: center
+    
+    

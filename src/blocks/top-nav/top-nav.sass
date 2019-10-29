@@ -1,0 +1,96 @@
+.top-nav
+  font-weight: 500
+  font-size: 1.125em
+
+  @media (min-width: $screen-xl)
+    font-size: .875em
+
+  @media (min-width: $screen-lg)
+    font-size: .75em
+
+  @media (min-width: $screen-sm)
+    font-size: 1.25em
+
+
+  &__toggler   
+    margin-right: 1em
+
+    @media (min-width: $screen-lg)
+      display: none    
+
+    @media (min-width: $screen-md)
+      font-size: 1.25em  
+
+    @media (min-width: $screen-sm)
+      font-size: 1.125em  
+    
+
+  &__list
+    display: flex
+    margin: 0
+    padding: 0
+    list-style: none
+
+    @media (max-width: $screen-lg - 1)
+      flex-direction: column
+      width: 100%
+      max-width: 340px
+      overflow: auto
+      position: fixed
+      z-index: 20
+      top: 0
+      bottom: 0
+      left: 0
+      border-right: 1px solid $border-color
+      padding: $field-padding-vertical*2 $field-padding-horizontal 0
+      transform: translateX(-100%)
+      transition: transform $transition-time
+
+      background: $white
+
+    @media (max-width: $screen-sm - 1)
+      max-width: 260px
+
+
+  &__item
+    margin-right: 0
+
+    @media (min-width: $screen-xl)
+      margin-right: 3em
+
+    @media (min-width: $screen-lg)
+      margin-right: 2em
+
+    &:last-of-type
+      margin-right: 0
+
+      
+      
+
+  &__link
+    color: $gray
+    text-decoration: none
+    cursor: pointer
+    transition: color $transition-time
+
+    @media (max-width: $screen-lg - 1)
+      display: block
+      padding: $field-padding-vertical*2 $field-padding-horizontal*2
+
+    
+    &:hover,
+    &:focus
+      color: $color-main
+
+    &--current
+      color: $black
+      cursor: default
+
+      
+      &:hover, 
+      &:focus
+        color: $black
+
+  &--is-open &__list
+    transform: translateX(0%)
+

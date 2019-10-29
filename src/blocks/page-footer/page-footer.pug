@@ -1,0 +1,45 @@
+footer.page-footer
+  .page-footer__logo
+    +logo("footer")(href="./")
+
+  .page-footer__wrap
+    +menu-footer('Contact', [['Contact Shareroom', '#']])(class="page-footer__menu")
+
+    +menu-footer('About', [
+      ['About Shareroom', '#'], 
+      ['Shareroom for Startups', '#'], 
+      ['Pricing', '#'], 
+      ['Students & Teachers', '#'], 
+      ['Media kit', '#'], 
+      ['Jobs', '#']
+    ])(class="page-footer__menu")
+
+    +menu-footer('Platform', [
+      ['Find Shared Rooms', '#'], 
+      ['Add A Place', '#'], 
+      ['Services', '#'], 
+      ['Boards', '#'], 
+      ['Calendar', '#']
+    ])(class="page-footer__menu")
+
+    +menu-footer('Resources', [
+      ['Blog', '#'], 
+      ['Design Resources', '#'], 
+      ['Product Training', '#'], 
+      ['Help Center', '#'], 
+      ['Knowledge Base', '#'], 
+      ['Community', '#']
+    ])(class="page-footer__menu")
+
+    +menu-footer('Download our app')(class="page-footer__menu page-footer__menu--last")
+      +menu-footer__item('', '', '')
+        +btn('','white, color-black')(href="#", class="btn-app")
+          +labeled-icon('apple')
+            .btn-app__small Available on the
+            .btn-app__text Appstore
+
+      +menu-footer__item('', '', '')
+        +btn('','main')(href="#", class="btn-app")
+          +labeled-icon('android')
+            .btn-app__small Available on the
+            .btn-app__text Playmarket

@@ -1,0 +1,59 @@
+//- 
+  +menu-footer('About', [
+    ['About Shareroom', '#'], 
+    ['Shareroom for Startups', '#'], 
+    ['Pricing', '#'], 
+    ['Students & Teachers', '#'], 
+    ['Media kit', '#'], 
+    ['Jobs', '#']
+  ])
+
+//- 
+  Arguments
+    {String} title         Menu title
+    {Array.<[String, String]>} links  Array of links. 
+                                      For each Link first array item is Link text,
+                                      secondary item is link href attribute
+    {String} mods  List of block modificators
+
+mixin menu-footer(title, links = [], mods)
+  -
+    // add mods
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' menu-footer--' + modsList[i].trim();
+      }
+    }
+
+  nav.menu-footer(class=allMods)&attributes(attributes)
+    .menu-footer__title!= title
+    ul.menu-footer__list
+      each item in links
+        +menu-footer__item(item[0], item[1])
+      
+      block
+
+
+mixin menu-footer__item(text, href, mods)
+  //- 
+
+  -
+    // add mods
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' menu-footer__item--' + modsList[i].trim();
+      }
+    }
+
+  li.menu-footer__item(class=allMods)&attributes(attributes)
+    if(typeof(href) !== 'undefined' && href)
+      a.menu-footer__link(href=href)!= text
+    else
+      != text
+
+    block
+

@@ -1,0 +1,33 @@
+//-   
+  +shifted-card("Card title", "Card subtitle")
+    +btn("Create property listing", "lg, accent2")(href="#")
+
+//- 
+  Arguments
+    {String} title      Title of the card
+    {String} subtitle   Subtitle
+    {String} mods       List of modificators
+
+mixin shifted-card(title, subtitle, mods)
+
+  //- add modificators
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' shifted-card--' + modsList[i].trim();
+      }
+    }
+
+  .shifted-card(class=allMods)&attributes(attributes)
+    .shifted-card__left
+      if (title !== 'undefined' && title)
+        .shifted-card__title!=title
+      
+      if (subtitle !== 'undefined' && subtitle)
+        .shifted-card__subtitle!=subtitle
+
+    .shifted-card__right
+      block
+

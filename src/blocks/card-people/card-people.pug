@@ -1,0 +1,25 @@
+mixin card-people(name, isOnline, imgsrc, mods)
+
+  //- add modificators
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' card-people--' + modsList[i].trim();
+      }
+    }
+    var addPhotoClass = '';
+    if (!isOnline) {
+      addPhotoClass = 'card-people__photo--off';
+    }
+
+  article.card-people(class=allMods)&attributes(attributes)
+    a.card-people__photo(href="#", class=addPhotoClass)
+      img(src=imgsrc, alt=name)
+
+    h3.card-people__title
+      a.card-people__title-link(href="#")!= name
+
+    .card-people__subtitle
+      block

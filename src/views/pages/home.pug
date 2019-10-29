@@ -1,0 +1,73 @@
+extends ../layouts/default
+
+block variables
+  - const title = "Home Page";
+
+block content
+  include ../../blocks/homepage-hero/homepage-hero.pug
+  include ../../blocks/homepage-searchform/homepage-searchform.pug
+  include ../../blocks/homepage-popular/homepage-popular.pug
+
+  section.page-section.page-section--white
+    .page-section__wrap
+      h2.page-section__title Latest property listing in 
+        +link('gray')(href='#') Melbourne
+  
+      .row-rooms-home
+        .row-rooms-home__col
+          +card-property("106/1 Macquarie Street, Melbourne", "Homestay", "$150", "./img/apartment-room-1.jpg")
+
+        .row-rooms-home__col
+          +card-property("106/1 Macquarie Street, Melbourne", "Homestay", "$150", "./img/apartment-room-2.jpg")
+
+        .row-rooms-home__col
+          +card-property("106/1 Macquarie Street, Melbourne", "Homestay", "$150", "./img/apartment-room-3.jpg")
+
+        .row-rooms-home__col
+          +card-property("106/1 Macquarie Street, Melbourne", "Homestay", "$150", "./img/apartment-room-4.jpg")
+
+      .page-section__footer
+        +link()(href='#') View all properties in Melbourne
+
+      .page-section__divider
+
+
+      h2.page-section__title Latest people looking in 
+        +link('gray')(href='#') Melbourne
+  
+      .row-rooms-home
+        .row-rooms-home__col.row-rooms-home__col--xs
+          +card-people("Taylor Robertson", true, "./img/people-1.jpg")
+            b.color-black Looking in: 
+            |  Oakleigh, Narre Warren, Frankston, Dandenong, Cranbourne
+
+        .row-rooms-home__col.row-rooms-home__col--xs
+          +card-people("Chris Evans", false, "./img/people-2.jpg")
+            b.color-black Looking in: 
+            |  Oakleigh, Narre Warren, Frankston, Dandenong, Cranbourne
+        
+        .row-rooms-home__col.row-rooms-home__col--xs
+          +card-people("Dan Petty", false, "./img/people-3.jpg")
+            b.color-black Looking in: 
+            |  Oakleigh, Narre Warren, Frankston, Dandenong, Cranbourne
+        
+        .row-rooms-home__col.row-rooms-home__col--xs
+          +card-people("Maria Cole", true, "./img/people-4.jpg")
+            b.color-black Looking in: 
+            |  Oakleigh, Narre Warren, Frankston, Dandenong, Cranbourne
+
+      .page-section__footer
+        +link()(href='#') View all people looking in Melbourne
+
+
+  include ../../blocks/homepage-hero2/homepage-hero2.pug
+
+  section.page-section.page-section--last
+    .page-section__wrap
+      include ../../blocks/reviews/reviews.pug
+
+
+block scripts
+  script(src="./js/main.js")
+  //- script(src="../js/pageB.js")
+  script(src="./js/vendor.js")

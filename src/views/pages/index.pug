@@ -1,0 +1,27 @@
+extends ../layouts/default
+
+block variables
+  - const title = "Shareroom Layout";
+
+block content
+
+  section.page-section.page-section--last
+    .page-section__wrap
+      article.single-page
+        a(href="./home.html")
+          h4 Homepage
+        a(href="./search.html")
+          h4 Search page
+        a(href="./sign-in.html")
+          h4 Sign in
+        a(href="./single-page.html")
+          h4 Article
+        a(href="./typography.html")
+          h4 Typography
+
+
+block scripts
+  script(src="./js/main.js")
+  //- script(src="../js/pageB.js")
+  script(src="./js/vendor.js")
+    

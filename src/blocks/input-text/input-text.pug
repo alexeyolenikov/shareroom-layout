@@ -1,0 +1,21 @@
+//- 
+  +input-text()(type="text" placeholder="Placeholder") Label text
+  
+mixin input-text(mods, labelMods)
+
+  -
+    // add mods
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' input-text--' + modsList[i].trim();
+      }
+    }
+ 
+
+  label.input-text(class=allMods)
+    +input-label(labelMods)
+      block
+            
+    input.input-text__input&attributes(attributes)

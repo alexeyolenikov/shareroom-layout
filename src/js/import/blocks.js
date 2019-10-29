@@ -1,0 +1,8 @@
+import "%blocks%/top-nav/top-nav"
+import "%blocks%/icon/icon"
+import "%blocks%/dropdown/dropdown"
+import "%blocks%/select-dropdown/select-dropdown"
+import "%blocks%/searchform/searchform"
+import "%blocks%/tabs/tabs"
+import "%blocks%/reviews/reviews"
+import "%blocks%/vip-rooms/vip-rooms"

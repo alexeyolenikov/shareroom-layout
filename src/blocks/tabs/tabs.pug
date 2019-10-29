@@ -1,0 +1,84 @@
+//- 
+  +tabs()
+    +tabs__links-wrap()
+      +tabs__link('home-pop-tab-1', 'active')
+        | Tab 1
+
+      +tabs__link('home-pop-tab-2')
+        | Tab 2
+
+    +tabs__panels-wrap()
+      +tabs__panel('home-pop-tab-1', 'active')
+        | Tab 1 content
+
+      +tabs__panel('home-pop-tab-2')
+        | Tab 2 content
+
+
+
+mixin tabs(mods)
+
+  //- add modificators
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' tabs--' + modsList[i].trim();
+      }
+    }
+
+  nav.tabs(class=allMods)&attributes(attributes)
+    block
+
+
+mixin tabs__links-wrap()
+  .tabs__links-wrap(role="tablist")
+    block
+
+mixin tabs__panels-wrap()
+  .tabs__panels-wrap
+    block
+
+mixin tabs__link(id, mods)
+
+  //- add modificators
+  -
+    var allMods = '';
+    var isDropdown = false;
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' tabs__link--' + modsList[i].trim();
+
+        if(modsList[i].trim() === 'dropdown') {
+          isDropdown = true;
+        }
+      }
+    }
+    var href = '#' + id;
+
+  if (!isDropdown)
+    a.tabs__link(class=allMods, role="tab", data-toggle="tab", href=href)&attributes(attributes)
+      block
+  else
+    .tabs__link(class=allMods, aria-haspopup="true")&attributes(attributes)
+      block
+
+      .tabs__dropdown-wrap
+
+
+mixin tabs__panel(id, mods)
+
+  //- add modificators
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' tabs__panel--' + modsList[i].trim();
+      }
+    }
+
+  .tabs__panel(class=allMods, role="tabpanel", id=id)&attributes(attributes)
+    block

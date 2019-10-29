@@ -1,0 +1,93 @@
+section.page-section
+  .page-section__wrap
+    h2.page-section__title Popular searches
+    
+    +tabs('autohide')
+      +tabs__links-wrap()
+        +tabs__link('home-pop-tab-1', 'active')
+          +labeled-icon('house', 'lg') Rooms in a sharehouse
+
+        +tabs__link('home-pop-tab-2')
+          +labeled-icon('student', 'lg') Student accomodation
+
+        +tabs__link('home-pop-tab-3')
+          +labeled-icon('real-estate', 'lg') Whole properties for rent
+
+        +tabs__link('home-pop-tab-4')
+          +labeled-icon('bed', 'lg') One bed flats
+
+        +tabs__link('home-pop-tab-5')
+          +labeled-icon('granny', 'lg') Granny flats
+
+        +tabs__link('home-pop-tab-6')
+          +labeled-icon('studio', 'lg') Studio flats
+
+        +tabs__link('', 'dropdown')
+          +labeled-icon('more', 'lg') More
+
+
+      +tabs__panels-wrap()
+        +tabs__panel('home-pop-tab-1', 'active')
+          .homepage-popular
+            .homepage-popular__col
+              +shifted-card('I have a spare room', 'Over 2,000 spare rooms')
+                +btn("Create property listing", "lg, accent2")(href="#")
+
+            .homepage-popular__col
+              +shifted-card('I need a place', 'Over 20,000 users searching a place')
+                +btn("Create a person listing", "lg, accent")(href="#")
+
+        +tabs__panel('home-pop-tab-2')
+          .homepage-popular
+            .homepage-popular__col
+              +shifted-card('I have a spare room', 'Over 2,000 spare rooms')
+                +btn("Create property listing", "lg, accent")(href="#")
+
+            .homepage-popular__col
+              +shifted-card('I need a place', 'Over 20,000 users searching a place')
+                +btn("Create a person listing", "lg, accent2")(href="#")
+
+
+        +tabs__panel('home-pop-tab-3')
+          .homepage-popular
+            .homepage-popular__col
+              +shifted-card('I have a spare room', 'Over 2,000 spare rooms')
+                +btn("Create property listing", "lg, accent2")(href="#")
+
+            .homepage-popular__col
+              +shifted-card('I need a place', 'Over 20,000 users searching a place')
+                +btn("Create a person listing", "lg, main")(href="#") 
+
+
+        +tabs__panel('home-pop-tab-4')
+          .homepage-popular
+            .homepage-popular__col
+              +shifted-card('I have a spare room', 'Over 2,000 spare rooms')
+                +btn("Create property listing", "lg")(href="#")
+
+            .homepage-popular__col
+              +shifted-card('I need a place', 'Over 20,000 users searching a place')
+                +btn("Create a person listing", "lg, main")(href="#") 
+
+
+        +tabs__panel('home-pop-tab-5')
+          .homepage-popular
+            .homepage-popular__col
+              +shifted-card('I have a spare room', 'Over 2,000 spare rooms')
+                +btn("Create property listing", "lg, main")(href="#") 
+
+            .homepage-popular__col
+              +shifted-card('I need a place', 'Over 20,000 users searching a place')
+                +btn("Create a person listing", "lg, accent2")(href="#")
+
+
+        +tabs__panel('home-pop-tab-6')
+          .homepage-popular
+            .homepage-popular__col
+              +shifted-card('I have a spare room', 'Over 2,000 spare rooms')
+                +btn("Create property listing", "lg, white")(href="#") 
+
+            .homepage-popular__col
+              +shifted-card('I need a place', 'Over 20,000 users searching a place')
+                +btn("Create a person listing", "lg, accent")(href="#")
+

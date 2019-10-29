@@ -1,0 +1,62 @@
+.page-footer
+  padding: 0 0 60px
+  background: $black
+
+  &__logo
+    display: flex
+    justify-content: center
+    transform: translateY(-$footer-logo-offset-top)
+    margin-bottom: -$footer-logo-offset-top
+
+    font-size: 1.625em
+
+  &__wrap
+    @include container()
+    padding-top: 60px
+    display: flex
+    flex-wrap: wrap
+  
+    @media (min-width: $screen-md)
+      flex-wrap: nowrap
+  
+    @media (min-width: $screen-xl)
+      padding-top: 80px
+
+    
+  &__menu
+    margin-right: auto
+    padding-right: $field-padding-horizontal
+
+    flex: 0 0 50%
+    max-width: 50%
+  
+    @media (min-width: $screen-sm)
+      flex: 0 0 33.33333%
+  
+    @media (min-width: $screen-sm)
+      flex: auto
+
+    &:nth-child(n+3)
+      @media (max-width: $screen-md - 1)
+        margin-top: $typo-margin-vertical*3
+
+    &:nth-child(1),
+    &:nth-child(2)
+      @media (min-width: $screen-sm) and (max-width: $screen-md - 1)
+        max-width: 30%
+        flex: 1 1 30%
+        order: -2
+    
+    &.page-footer__menu--last
+      flex-shrink: 1
+
+      padding-right: 0
+
+      @media (min-width: $screen-sm) and (max-width: $screen-md - 1)
+        max-width: 40%
+        flex: 0
+        order: -1
+        margin-top: 0
+
+      @media (max-width: $screen-sm - 1)
+        max-width: none

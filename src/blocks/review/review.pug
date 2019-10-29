@@ -1,0 +1,20 @@
+mixin review(name, info, mods)
+  //- 
+    +review("Nick Butura", "Student from Tbilisi")
+      | It helped us to rapidly find shared room that were much more time-consuming in the past
+
+  -
+    // add mods
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' review--' + modsList[i].trim();
+      }
+    }
+
+  .review(class=allMods)&attributes(attributes)
+    .review__text
+      block
+    .review__author-name!=name
+    .review__author-info!=info

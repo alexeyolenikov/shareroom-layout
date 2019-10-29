@@ -1,0 +1,17 @@
+mixin input-label(mods)
+  //- 
+    +input-label('mods')
+      | text
+      
+  -
+    // add mods
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' input-label--' + modsList[i].trim();
+      }
+    }
+ 
+  span.input-label(class=allMods)&attributes(attributes)
+    block

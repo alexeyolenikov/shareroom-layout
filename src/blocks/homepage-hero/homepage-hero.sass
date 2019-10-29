@@ -1,0 +1,61 @@
+.homepage-hero
+  background-image: url("../img/banner-970.jpg")
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: 50% 25%
+
+  @media(min-width: $screen-lg)   
+    background-image: url("../img/banner.jpg")
+  
+  &__overlay
+    padding: 140px 0 120px
+    background-color: rgba(0, 0, 0, .25)
+
+    @media(min-width: $screen-xxl)   
+      padding: 180px 0 160px 
+
+    @media(min-width: $screen-xl)   
+      padding: 160px 0 140px 
+
+  &__wrap
+    @include container()
+
+    @media(min-width: $screen-md)    
+      display: flex
+    
+  &__col
+    @media(min-width: $screen-md)
+      flex: 0 0 76%
+
+    &--video
+      display: none
+
+      @media(min-width: $screen-md)
+        display: flex
+        align-items: center
+        justify-content: center
+        flex: auto
+      
+      
+  &__title
+    margin: 0 0 50px
+    // 38 < font-size < 46
+    font-size: calc(36px + 10*(100vw - 320px) / #{$screen-md / 1px - 320})
+    letter-spacing: -.01em
+    color: $white
+
+    // 46 < font-size < 76
+    @media (min-width: $screen-md)
+      font-size: calc(46px + 31*(100vw - #{$screen-md}) / #{$screen-xxl / 1px - $screen-md / 1px})
+
+    @media (min-width: $screen-xxl)
+      font-size: 76px
+    
+
+  &__buttons
+    margin-bottom: -1em
+
+    & .btn
+      vertical-align: top
+      margin-right: 1.5em
+      margin-bottom: 1em

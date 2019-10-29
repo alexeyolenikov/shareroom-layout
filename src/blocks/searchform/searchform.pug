@@ -1,0 +1,179 @@
+.searchform
+  .searchform__col(data-col-id="1")
+    +input-text-sf()(type="text" placeholder="City")
+      | Location
+
+  .searchform__col(data-col-id="2")
+    +select-dropdown("Interests", "Sport & Entertainment", "Select")
+      .searchform__col-drop-content
+        +input-radio([
+          {
+            title: 'List item 1',
+            mods: '',
+            attrs: {
+              name: 'radio-searchform1',
+              checked: true,
+            }
+          },
+          {
+            title: 'List item 2',
+            mods: '',
+            attrs: {
+              name: 'radio-searchform1',
+            }
+          },
+          {
+            title: 'List item 3',
+            mods: '',
+            attrs: {
+              name: 'radio-searchform1',
+            }
+          },
+          {
+            title: 'List item 4',
+            mods: '',
+            attrs: {
+              name: 'radio-searchform1',
+            }
+          },
+          {
+            title: 'List item 5',
+            mods: '',
+            attrs: {
+              name: 'radio-searchform1',
+            }
+          },
+        ], 'Interests')
+
+  .searchform__col(data-col-id="3")
+    +select-dropdown("Budget", "$100 - $200", "Select")
+      .searchform__col-drop-content
+        +input-radio([
+          {
+            title: 'List item 1',
+            mods: '',
+            attrs: {
+              name: 'radio-Budget',
+              checked: true,
+            }
+          },
+          {
+            title: 'List item 2',
+            mods: '',
+            attrs: {
+              name: 'radio-Budget',
+            }
+          },
+        ], 'Budget')
+
+  .searchform__col(data-col-id="4")
+    +select-dropdown("Type", "Sharedroom", "Select")
+      .searchform__col-drop-content
+        +input-radio([
+          {
+            title: 'List item 1',
+            mods: '',
+            attrs: {
+              name: 'radio-Type',
+              checked: true,
+            }
+          },
+          {
+            title: 'List item 2',
+            mods: '',
+            attrs: {
+              name: 'radio-Type',
+            }
+          },
+        ], 'Type')
+
+  .searchform__col(data-col-id="5")
+    +select-dropdown("User status", "Verified", "Select")
+      .searchform__col-drop-content
+        +input-radio([
+          {
+            title: 'List item 1',
+            mods: '',
+            attrs: {
+              name: 'radio-status',
+              checked: true,
+            }
+          },
+          {
+            title: 'List item 2',
+            mods: '',
+            attrs: {
+              name: 'radio-status',
+            }
+          },
+        ], 'User status')
+
+  .searchform__col(data-col-id="6")
+    .searchform__col-drop-content
+      +input-text-sf()(type="text" placeholder="Some input placeholder")
+        | Some input  
+
+  .searchform__col(data-col-id="7")
+    +select-dropdown("Other filter", "Some value", "Select")
+      .searchform__col-drop-content
+        +input-radio([
+          {
+            title: 'List item 1',
+            mods: '',
+            attrs: {
+              name: 'radio-other1',
+              checked: true,
+            }
+          },
+          {
+            title: 'List item 2',
+            mods: '',
+            attrs: {
+              name: 'radio-other1',
+            }
+          },
+        ], 'Other filter')
+
+  .searchform__col(data-col-id="8")
+    +select-dropdown("Other filter 2", "Some value", "Select")
+      .searchform__col-drop-content
+        +input-radio([
+          {
+            title: 'List item 1',
+            mods: '',
+            attrs: {
+              name: 'radio-other2',
+            }
+          },
+          {
+            title: 'List item 2',
+            mods: '',
+            attrs: {
+              name: 'radio-other2',
+              checked: true,
+            }
+          },
+        ], 'Other filter 2')
+      
+  .searchform__col.searchform__col--last
+    +dropdown
+      .searchform__more(aria-haspopup="menu")
+        .searchform__more-col
+          +input-radio([
+            {
+              title: 'List item 1',
+              mods: '',
+              attrs: {
+                name: 'radio-other22',
+              }
+            },
+            {
+              title: 'List item 2',
+              mods: '',
+              attrs: {
+                name: 'radio-other22',
+                checked: true,
+              }
+            },
+          ], 'Some filter')
+    

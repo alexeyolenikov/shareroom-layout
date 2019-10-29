@@ -1,0 +1,47 @@
+mixin input-radio(radiobuttons, title)
+
+  //- Arguments:
+  //-   radiobuttons {array}
+  //-     {object}
+  //-       title: ''         {string} - текст рядом с радиокнопкой
+  //-       mods: ''          {string} - модификаторы обертки радиокнопки
+  //-       attrs:            {object} - любые атрибуты для input
+  //-         name:           {string}
+  //-         ...
+  //-   title {string}
+  //- 
+        +input-radio([
+          {
+            title: 'Radio button 1',
+            mods: '',
+            attrs: {
+              name: 'radio',
+              checked: true,
+            }
+          },
+          {
+            title: 'Radio button 2',
+            mods: '',
+            attrs: {
+              name: 'radio',
+            }
+          },
+        ], 'List title')
+
+  .input-radio&attributes(attributes)
+    if(typeof(title) !== 'undefined' && title)
+      +input-label(labelMods)!= title
+    each checkbox in radiobuttons
+      -
+        var allMods = '';
+        if(typeof(checkbox.mods) !== 'undefined' && checkbox.mods) {
+          var modsList = checkbox.mods.split(',');
+          for (var i = 0; i < modsList.length; i++) {
+            allMods = allMods + ' input-radio__item--' + modsList[i].trim();
+          }
+        }
+      label.input-radio-item(class=allMods)
+        input.input-radio-item__input(type='radio')&attributes(checkbox.attrs)
+        .input-radio-item__marker
+        span.input-radio-item__text!= checkbox.title
+

@@ -1,0 +1,59 @@
+.input-text
+  width: 100%
+
+  &__input
+    display: block
+    width: 100%
+    max-width: 100%
+    overflow: hidden
+    text-overflow: ellipsis
+    
+    box-shadow: none
+    background: $white
+    outline: none
+    margin: 0
+    border: 3px solid $border-color
+    border-radius: $border-radius
+    padding: $field-padding-vertical*3 $field-padding-horizontal*1.5
+
+    color: $text-color
+    font-family: inherit
+    font-size: 1em
+    line-height: 1
+    letter-spacing: .025em
+
+    transition: border-color $transition-time, color $transition-time
+
+    -moz-appearance: textfield
+    // stylelint-disable-line
+    appearance: textfield
+
+    
+    &:focus
+      outline: none
+      border-color: $color-main
+      color: $color-main
+
+    &[disabled],
+    &[readonly]
+      cursor: not-allowed
+
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-decoration,
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button
+      -webkit-appearance: none// stylelint-disable-line  property-no-vendor-prefix
+
+    &::placeholder
+      color: $text-color--gray
+      opacity: 1
+
+  &--error
+
+    .input-text__name,
+    .input-text__input
+      color: $color-danger
+
+    .input-text__input
+      border-color: $color-danger
+      background-color: lighten($color-danger, 35%)

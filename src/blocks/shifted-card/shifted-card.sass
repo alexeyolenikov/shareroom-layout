@@ -1,0 +1,65 @@
+.shifted-card
+  @media (min-width: $screen-sm) and (max-width: $screen-md - 1), (min-width: $screen-lg)
+    display: flex
+    align-items: center
+
+  $shiftleft: 130px
+  $shiftleft-xl: 140px
+  $shiftleft-xxl: 150px
+
+  
+  &__left
+    padding: $field-padding-vertical*3 $field-padding-horizontal*2 $field-padding-vertical*5
+    background-color: $white
+    border-radius: 14px
+    
+    
+    @media (min-width: $screen-sm) and (max-width: $screen-md - 1), (min-width: $screen-lg)
+      flex: 1 0 0%
+      padding: $field-padding-vertical*3 $shiftleft $field-padding-vertical*3 $field-padding-horizontal*2
+    
+    @media (min-width: $screen-xl)
+      padding-right: $shiftleft-xl
+      padding-left: $field-padding-horizontal*3
+    
+    @media (min-width: $screen-xxl)
+      padding-right: $shiftleft-xxl
+      padding-left: $field-padding-horizontal*4
+    
+  &__right
+    padding-right: $field-padding-horizontal*2
+    margin-top: -$field-padding-vertical*3
+    text-align: right
+
+    @media (min-width: $screen-sm) and (max-width: $screen-md - 1), (min-width: $screen-lg)
+      margin: 0 0 0 #{-$shiftleft + $field-padding-horizontal}
+      padding: $field-padding-vertical*3 0
+      font-size: .9em
+      text-align: left
+    
+    @media (min-width: $screen-xl)
+      margin-left: -$shiftleft-xl + $field-padding-horizontal
+    
+    @media (min-width: $screen-xxl)
+      margin-left: -$shiftleft-xxl + $field-padding-horizontal
+
+    
+    
+
+  &__title
+    font-weight: 700
+    font-size: 1.5em
+
+    @media (min-width: $screen-lg)
+      font-size: 1.25em
+
+    @media (min-width: $screen-xl)
+      font-size: 1.5em
+    
+    
+  &__title + &__subtitle
+    margin-top: $typo-margin-vertical / 2
+  
+  &__subtitle
+    font-size: .875em
+    color: $gray

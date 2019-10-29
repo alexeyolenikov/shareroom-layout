@@ -1,0 +1,17 @@
+header.page-header
+  .page-header__col.page-header__logo
+    +logo("")(href="./")
+
+  .page-header__col.page-header__col--menu
+    include ../top-nav/top-nav.pug
+
+  .page-header__col
+    .page-header-buttons
+      +btn('','lg, main')(href="#", aria-label="Find house")
+        +icon('search')(class="btn__icon")
+        span.page-header-buttons__text Find house
+
+      +btn('','lg, color-main, white')(href="#", aria-label="Sign in")
+        +icon('user')(class="btn__icon")
+        span.page-header-buttons__text Sign in
+

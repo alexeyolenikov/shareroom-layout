@@ -1,0 +1,18 @@
+mixin input-text-sf(mods, labelMods)
+
+  -
+    // add mods
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' input-text-sf--' + modsList[i].trim();
+      }
+    }
+ 
+
+  label.input-text-sf(class=allMods)
+    +input-label(labelMods)
+      block
+            
+    input.input-text-sf__input&attributes(attributes)

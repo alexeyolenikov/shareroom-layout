@@ -1,0 +1,25 @@
+.play-button
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 4.5em
+  height: 4.5em
+  border: none
+  border-radius: 50%
+  padding: 0
+
+  background-color: $color-main
+  color: $white
+  font-size: 1em
+  text-decoration: none
+  cursor: pointer
+
+  transition: background-color $transition-time
+
+  &:hover,
+  &:focus
+    background-color: darken($color-main, 10%)
+
+  &--disabled,
+  &:disabled
+    background-color: $color-main--light

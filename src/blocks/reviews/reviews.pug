@@ -1,0 +1,43 @@
+.reviews
+  h2.reviews__title Reviews
+
+  .reviews__wrap
+    .reviews__authors-left
+      .reviews__author.reviews__author--active(data-slide-id="1")
+        img.reviews__author-photo(src="./img/people-1.jpg")
+      .reviews__author(data-slide-id="2")
+        img.reviews__author-photo(src="./img/people-2.jpg")
+      .reviews__author(data-slide-id="3")
+        img.reviews__author-photo(src="./img/people-3.jpg")
+
+
+    .reviews__slides-wrap
+      +review("Nick Butura", "Student from Tbilisi")(class="reviews__slide reviews__slide--active", data-slide-id="1")
+        | It helped us to rapidly find shared room that were much more time-consuming in the past
+
+      +review("Cris Evans", "Student from Frankston")(class="reviews__slide", data-slide-id="2")
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate architecto beatae nobis!
+
+      +review("Nick Butura", "Student from Cranbourne")(class="reviews__slide", data-slide-id="3")
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae aliquam itaque natus maxime expedita odit ad.
+
+      +review("Nick Butura", "Student from Oakleigh")(class="reviews__slide", data-slide-id="4")
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis quas corporis eos dolorem.
+
+      +review("Nick Butura", "Student from Dandenong")(class="reviews__slide", data-slide-id="5")
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque delectus, dolor qui accusamus fuga magni! Architecto?
+
+      +review("Nick Butura", "Student from Frankston")(class="reviews__slide", data-slide-id="6")
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, nulla deserunt quaerat quisquam suscipit quidem.
+
+   
+    .reviews__authors-right
+      .reviews__author(data-slide-id="4")
+        img.reviews__author-photo(src="./img/people-4.jpg")
+      .reviews__author(data-slide-id="5")
+        img.reviews__author-photo(src="./img/people-5.jpg")
+      .reviews__author(data-slide-id="6")
+        img.reviews__author-photo(src="./img/people-6.jpg")
+
+    .reviews__carousel
+

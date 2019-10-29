@@ -1,0 +1,14 @@
+section.homepage-hero
+  .homepage-hero__overlay
+    .homepage-hero__wrap
+      .homepage-hero__col
+        h1.homepage-hero__title Find share accomodation Worldwide on Shareroom
+        div.homepage-hero__buttons
+          +btn('','lg, accent2')(href="#")
+            +icon('add')(class="btn__icon")
+            | Create new account
+          +btn('','lg, accent')(href="#")
+            | Download Shareroom app
+
+      .homepage-hero__col.homepage-hero__col--video
+        +play-button("")(role="presentation", aria-label="Play video")

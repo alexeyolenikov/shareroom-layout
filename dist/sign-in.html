@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sign In</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="../img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="../img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="../img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="../img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="../img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="../img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="../img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="../img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="./styles/main.min.css">
+  </head>
+  <body>
+    <div class="sign-in">
+      <header class="page-header">
+        <div class="page-header__col page-header__logo"><a class="logo" href="./"><img class="icon-home" src="./img/house.svg" alt="logo"/><span class="logo__text">shareroom</span></a>
+        </div>
+        <div class="page-header__col page-header__col--menu">
+          <nav class="top-nav">
+            <div class="top-nav__toggler" role="button" aria-haspopup="menu">
+              <button class="hamburger" aria-label="Show menu"><span></span><span></span><span></span></button>
+            </div>
+            <ul class="top-nav__list">
+              <li class="top-nav__item"><a class="top-nav__link top-nav__link--current" href="#">Home</a></li>
+              <li class="top-nav__item"><a class="top-nav__link" href="#">About</a></li>
+              <li class="top-nav__item"><a class="top-nav__link" href="#">Locations</a></li>
+              <li class="top-nav__item"><a class="top-nav__link" href="#">Reviews</a></li>
+              <li class="top-nav__item"><a class="top-nav__link" href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="page-header__col">
+          <div class="page-header-buttons"><a class="btn  btn--lg btn--main" href="#" aria-label="Find house">
+              <svg class="icon icon-search btn__icon">
+                <use xlink:href="img/sprites/sprite.svg#search"></use>
+              </svg><span class="page-header-buttons__text">Find house</span></a><a class="btn  btn--lg btn--color-main btn--white" href="#" aria-label="Sign in">
+              <svg class="icon icon-user btn__icon">
+                <use xlink:href="img/sprites/sprite.svg#user"></use>
+              </svg><span class="page-header-buttons__text">Sign in</span></a>
+          </div>
+        </div>
+      </header>
+      <main>
+        <main class="sign-in__wrap">
+          <h1 class="sign-in__title">Sign in to Shareroom</h1>
+          <h2 class="sign-in__subtitle">Enter your details below</h2>
+          <form class="form sign-in__form">
+            <div class="form__row">
+              <div class="form__col-xl50">
+                <label class="input-text"><span class="input-label">Email address</span>
+                  <input class="input-text__input" type="email" placeholder="E-mail"/>
+                </label>
+              </div>
+              <div class="form__col-xl50">
+                <label class="input-text"><span class="input-label  input-label--forgot">Password<a class="input-label__forgot-link" href="#">Forgot your password?</a></span>
+                  <input class="input-text__input" type="password" placeholder="Password"/>
+                </label>
+              </div>
+            </div>
+            <div class="form__btns">
+              <input class="btn  btn--main btn--xl form__submit" value="Sign in" type="submit"/><a class="btn  btn--white btn--xl" href="#">Create new account</a>
+            </div>
+          </form>
+        </main>
+      </main>
+    </div>
+    <footer class="page-footer">
+      <div class="page-footer__logo"><a class="logo  logo--footer" href="./"><img class="icon-home" src="./img/house.svg" alt="logo"/><span class="logo__text">shareroom</span></a>
+      </div>
+      <div class="page-footer__wrap">
+        <nav class="menu-footer page-footer__menu">
+          <div class="menu-footer__title">Contact</div>
+          <ul class="menu-footer__list">
+            <li class="menu-footer__item"><a class="menu-footer__link" href="#">Contact Shareroom</a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="menu-footer page-footer__menu">
+          <div class="menu-footer__title">About</div>
+          <ul class="menu-footer__list">
+            <li class="menu-footer__item"><a class="menu-footer__link" href="#">About Shareroom</a>
+            </li>
+            <li class="menu-footer__item"><a class="menu-footer__link" href="#">Shareroom for Startups</a>
+            </li>
+            <li class="menu-footer__item"><a class="menu-footer__link" href="#">Pricing</a>
+            </li>
+            <li class="menu-footer__item"><a class="menu-footer__link" href="#">Students & Teachers</a>
+            </li>
+            <li class="menu-footer__item"><a class="menu-footer__link" href="#">Media kit</a>
+            </li>
+            <li class="menu-footer__item"><a class="menu-footer__link" href="#">Jobs</a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="menu-footer page-footer__menu">
+          <div class="menu-footer__title">Platform</div>
+          <ul class="menu-footer__list">
+            <li class="menu-footer__item"><a class="menu-footer__link" href="#">Find Shared Rooms</a>
+            </li>
+            <li class="menu-footer__item"><a class="menu-footer__link" href="#">Add A Place</a>
+            </li>
+            <li class="menu-footer__item"><a class="menu-footer__link" href="#">Services</a>
+            </li>
+            <li class="menu-footer__item"><a class="menu-footer__link" href="#">Boards</a>
+            </li>
+            <li class="menu-footer__item"><a class="menu-footer__link" href="#">Calendar</a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="menu-footer page-footer__menu">
+          <div class="menu-footer__title">Resources</div>
+          <ul class="menu-footer__list">
+            <li class="menu-footer__item"><a class="menu-footer__link" href="#">Blog</a>
+            </li>
+            <li class="menu-footer__item"><a class="menu-footer__link" href="#">Design Resources</a>
+            </li>
+            <li class="menu-footer__item"><a class="menu-footer__link" href="#">Product Training</a>
+            </li>
+            <li class="menu-footer__item"><a class="menu-footer__link" href="#">Help Center</a>
+            </li>
+            <li class="menu-footer__item"><a class="menu-footer__link" href="#">Knowledge Base</a>
+            </li>
+            <li class="menu-footer__item"><a class="menu-footer__link" href="#">Community</a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="menu-footer page-footer__menu page-footer__menu--last">
+          <div class="menu-footer__title">Download our app</div>
+          <ul class="menu-footer__list">
+            <li class="menu-footer__item"><a class="btn  btn--white btn--color-black btn-app" href="#">
+                <div class="labeled-icon">
+                  <svg class="icon icon-apple labeled-icon__icon">
+                    <use xlink:href="img/sprites/sprite.svg#apple"></use>
+                  </svg>
+                  <div class="labeled-icon__label">
+                    <div class="btn-app__small">Available on the</div>
+                    <div class="btn-app__text">Appstore</div>
+                  </div>
+                </div></a>
+            </li>
+            <li class="menu-footer__item"><a class="btn  btn--main btn-app" href="#">
+                <div class="labeled-icon">
+                  <svg class="icon icon-android labeled-icon__icon">
+                    <use xlink:href="img/sprites/sprite.svg#android"></use>
+                  </svg>
+                  <div class="labeled-icon__label">
+                    <div class="btn-app__small">Available on the</div>
+                    <div class="btn-app__text">Playmarket</div>
+                  </div>
+                </div></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+    <script src="./js/main.min.js"></script>
+    <script src="./js/vendor.min.js"></script>
+  </body>
+</html>

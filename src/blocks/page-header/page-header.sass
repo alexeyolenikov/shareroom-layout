@@ -1,0 +1,47 @@
+.page-header
+  @include container()
+
+  display: flex
+  align-items: center
+  padding-top: 20px
+  padding-bottom: 20px
+
+  @media (min-width: $screen-xl)
+    padding-top: 32px
+    padding-bottom: 32px
+
+  @media (min-width: $screen-lg)
+    padding-top: 26px
+    padding-bottom: 26px
+
+  @media (min-width: $screen-sm)
+    padding-top: 24px
+    padding-bottom: 24px
+  
+  
+  &__col
+    &:first-of-type
+      margin-right: auto
+
+    &--menu
+      order: -1
+
+      @media(min-width: $screen-lg)
+        order: 0
+        margin-right: 3em
+
+  &__logo    
+    font-size: 1.25em
+
+    @media (min-width: $screen-xl)
+      font-size: 1.875em
+
+    @media (min-width: $screen-md)
+      font-size: 1.75em
+
+    @media (min-width: $screen-sm)
+      font-size: 1.625em
+      
+
+
+      

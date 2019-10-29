@@ -1,0 +1,16 @@
+mixin icon(name, mods)
+  //- 
+    +icon('name', 'mods')
+ 
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' icon--' + modsList[i].trim();
+      }
+    }
+ 
+  svg(class="icon icon-" + name + allMods)&attributes(attributes)
+    use(xlink:href="img/sprites/sprite.svg#" + name)

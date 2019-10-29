@@ -1,0 +1,24 @@
+//-   
+  +logo("")(href="#")
+
+mixin logo(mods)
+
+  //- add modificators
+  -
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' logo--' + modsList[i].trim();
+      }
+    }
+
+  if (attributes.href)
+    a.logo(class=allMods)&attributes(attributes)
+      +icon-home("logo")
+      span.logo__text shareroom
+
+  else
+    .logo(class=allMods)&attributes(attributes)
+      +icon-home("logo")
+      span.logo__text shareroom

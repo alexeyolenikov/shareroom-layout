@@ -1,0 +1,88 @@
+extends ../layouts/default
+
+block variables
+  - const title = "Typography";
+
+block content
+
+  section.page-section.page-section--last
+    .page-section__wrap
+      article.single-page
+        h1.page-section__title Typography 
+
+        h1 Heading 1
+        h2 Heading 2 
+        h3 Heading 3
+        h4 Heading 4 
+        h5 Heading 5
+        h6 Heading 6
+        
+        hr
+        h4 Simple text
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non nesciunt labore, nisi tempore! Perferendis eaque, odit sapiente, amet aspernatur rerum vel beatae iste itaque voluptates quasi laborum, nemo sequi quae dolorum repellat officiis eveniet laudantium. Architecto ipsam minus, nobis, deserunt error tenetur, dolorum ex rerum fugiat omnis consectetur quibusdam perspiciatis consequatur maxime doloribus. Culpa eos delectus itaque perspiciatis ex at?
+        
+        h4 List
+        ul
+          li List item
+          li List item
+          li List item
+
+        h4 Links
+        a(href="#") Simple link
+        br
+        +link('main')(href='#') Color main
+        br
+        +link('gray')(href='#') Color gray
+
+        h4 Icon with a label
+        +labeled-icon('search', 'small') Small icon
+        br
+        +labeled-icon('student', '') Normal icon
+        br
+        +labeled-icon('apple', 'lg') Large icon
+
+        hr
+        h3 Buttons
+        .btn-group
+          +btn('Default button')(href='#')
+          +btn('Main color', 'main')(href='#')
+          +btn('Accent color', 'accent')(href='#')
+          +btn('Accent2 color', 'accent2')(href='#')
+        br
+        div(style="background: #faf6f5; padding: 20px 15px")
+          .btn-group
+            +btn('Without background', 'no-bg')(href='#')
+            +btn('Without background (main color)', 'no-bg, color-main')(href='#')
+            +btn('Without background (black color)', 'no-bg, color-black')(href='#')
+          br
+          .btn-group
+            +btn('White button', 'white')(href='#')
+            +btn('White button (main color)', 'white, color-main')(href='#')
+            +btn('White button (black color)', 'white, color-black')(href='#')
+
+        h4 Buttons sizes
+        .btn-group
+          +btn('Default button')(href='#')
+          +btn('Large button', 'lg')(href='#')
+          +btn('Extra Large', 'xl')(href='#')
+          +btn('Biggest button', 'xxl')(href='#')
+
+        h4 Button with a icon
+        .btn-group
+          +btn('')(href='#')
+            +icon('house')(class="btn__icon")
+            | Default button
+
+        h4 Disabled buttons
+        .btn-group
+          +btn('Default button', 'disabled')(href='#')
+          +btn('Main color', 'main, disabled')(href='#')
+          +btn('Accent color', 'accent, disabled')(href='#')
+          +btn('Accent2 color', 'accent2, disabled')(href='#')
+        
+
+
+block scripts
+  script(src="./js/main.js")
+  //- script(src="../js/pageB.js")
+  script(src="./js/vendor.js")

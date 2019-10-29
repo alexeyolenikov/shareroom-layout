@@ -1,0 +1,49 @@
+.homepage-hero2
+  background: linear-gradient(180deg, $white 0%, $white 38%, $white--2 38%, $white--2 100%)
+
+  &__container
+    @include container()
+    
+  &__wrap
+    padding: 60px 30px
+  
+    background: url("../img/hero2.jpg") center top no-repeat
+    background-size: cover
+
+    @media (min-width: $screen-sm)
+      padding: 80px 60px
+
+    @media (min-width: $screen-md)
+      padding: 80px
+
+    @media (min-width: $screen-xl)
+      padding: 100px
+      
+    @media (min-width: $screen-xxl)
+      padding: 120px
+    
+    
+
+  &__subtitle
+    display: block
+    margin-bottom: $typo-margin-vertical*2
+    color: $white
+    font-weight: 700
+    text-transform: uppercase
+
+  &__title
+    margin: 0 0 50px
+    color: $white
+
+    // 34 < font-size < 76
+    font-size: calc(34px + 40*(100vw - 320px) / #{$screen-xxl / 1px - 320})
+    
+    @media (min-width: $screen-xxl)
+      font-size: 76px
+    
+
+  &__buttons
+    margin-bottom: -$typo-margin-vertical
+
+    & .btn-app
+      margin: 0 1.5em $typo-margin-vertical 0

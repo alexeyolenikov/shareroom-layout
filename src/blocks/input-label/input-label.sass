@@ -1,0 +1,31 @@
+.input-label
+  display: block
+  margin-bottom: 1em
+  overflow: hidden
+
+  color: $black
+  font-size: .875em
+  font-weight: 700
+  text-align: left
+  text-transform: uppercase
+  white-space: nowrap
+  text-overflow: ellipsis
+  transition: color $transition-time
+
+  &__forgot-link
+    margin-left: $field-padding-horizontal
+    font-size: .9em
+    letter-spacing: .1em
+    color: $text-color--gray
+    text-decoration: none
+    text-transform: none
+    transition: color $transition-time
+    float: right// ie10 fix
+
+    &:hover,
+    &:focus
+      color: $color-main
+
+  &--forgot
+    display: flex
+    justify-content: space-between
