@@ -1,5 +1,5 @@
 # shareroom-layout
- Shareroom layout
+ Shareroom website responsive layout
 
 ## Install
 * ```yarn```
