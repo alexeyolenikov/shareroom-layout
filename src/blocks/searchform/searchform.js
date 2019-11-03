@@ -1,3 +1,5 @@
+const Dropdown = require('../../blocks/dropdown/dropdown.js').default;
+
 class Searchform {
 
   constructor(formWrap) {
@@ -13,11 +15,17 @@ class Searchform {
 
   init() {
     this.checkColumns();
+    this.initDropdown();
 
     window.addEventListener('resize', (event) => {
       this.checkColumns();
     });
 
+  }
+
+  initDropdown() {
+    const dropdownWrap = this.formWrap.querySelector('.searchform__dropdown');
+    this.moreDropdown = new Dropdown(dropdownWrap);
   }
 
   checkColumns() {
