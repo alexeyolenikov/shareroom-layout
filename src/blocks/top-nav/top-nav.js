@@ -10,9 +10,13 @@ if(navElem && navElem.classList.contains('top-nav')) {
     bIsMenuOpen = !bIsMenuOpen;
   }); 
 
+  // fix click outside nav for IOS
+  let ua = navigator.userAgent,
+      event = (ua.match(/iPad/i) || ua.match(/iPhone/)) ? "touchstart" : "click";
+
   // hide menu on click outside of ".top-nav__list"
   const listElem = navElem.querySelector('.top-nav__list');
-  document.addEventListener('click', function(e) {
+  document.addEventListener(event, function(e) {
     if (!bIsMenuOpen || listElem.contains(e.target) || toggler.contains(e.target)) 
       return;
 
